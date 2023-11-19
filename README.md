@@ -1,3 +1,41 @@
+# Fork bru cool stuff maybe 
+
+So originali i wrote safe64 indapendantly 
+
+```
+//START SAFE64
+// map base64 to a url save chars  https://stackoverflow.com/a/40415059
+const bsCharMap = {
+    '+': '-',
+    '/': '~',
+    '=': '_',
+};
+// let safe64 = base64str.replace(/[+/=]/g, (match) => bsCharMap[match]);
+// reverse the above with fancy js
+const sbCharMap = Object.fromEntries(Object.entries(bsCharMap)
+    .map(e => [e[1], e[0]]))
+//construct the regex so the code is defined in one place
+const bsRegex = new RegExp(`[${Object.keys(bsCharMap).join()}]`, "g")
+const sbRegex = new RegExp(`[${Object.keys(sbCharMap).join()}]`, "g")
+
+function _btos(b64) {
+    return b64.replace(bsRegex, (match) => bsCharMap[match])
+}
+
+function _stob(s64) {
+    return b64.replace(sbRegex, (match) => sbCharMap[match])
+}
+
+//this does "123/+abc=" -> '123~-abc_'
+//END SAFE64
+```
+
+Then we got your lib so lits smash them together 
+
+# Read the code 
+
+[todo link code here ;) )[https://github.com/syonfox/skid/edit/main/nslug.js]
+
 <img align="right" src="http://media.taskcluster.net/logo/logo-96x120.png" />
 
 # slugid - Compressed UUIDs for Node.js
