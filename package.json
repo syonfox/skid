@@ -9,24 +9,21 @@
     "src"
   ],
   "scripts": {
-    "test": "mocha",
-    "test-nobuffer": "NO_BUFFER=1 yarn test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taskcluster/slugid.git"
+    "url": "https://github.com/syonfox/skid.git"
   },
   "types": "./src/index.d.ts",
   "bugs": {
-    "url": "https://github.com/taskcluster/slugid/issues"
+    "url": "https://github.com/syonfox/skid/issues"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=14"
   },
   "dependencies": {
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "mocha": "^10.2.0"
   }
 }

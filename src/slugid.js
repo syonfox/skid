@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 const uuid = require('uuid');
+const {_stob, _btos} = require("./safe64")
 
 /** @type {(bytes: Uint8Array) => string} */
 const toBase64 = (() => {
